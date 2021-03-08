@@ -18,7 +18,7 @@ import software.amazon.awssdk.auth.credentials.{
 import software.amazon.awssdk.regions.Region
 
 import java.nio.file.Paths
-class SampleTestIOApp extends IOApp {
+object SampleTestIOApp extends IOApp {
   override def run(args: List[String]): IO[ExitCode] = IO {
 
     val s3: S3[IO] = implicitly[S3[IO]](
