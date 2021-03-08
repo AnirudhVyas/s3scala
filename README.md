@@ -7,14 +7,10 @@ example usage:
 package me.free.s3.client
 
 import cats.effect.{ContextShift, IO}
-import org.scalatest.featurespec.AnyFeatureSpec
 import cats.effect._
 import cats.syntax.all._
 import cats.effect._
 import cats.effect.internals.{IOAppPlatform, IOContextShift, PoolUtils}
-import cats.effect.testing.scalatest.AsyncIOSpec
-import org.scalatest.matchers.should.Matchers
-import org.scalatest.freespec.AsyncFreeSpec
 import software.amazon.awssdk.auth.credentials.{
   AwsBasicCredentials,
   AwsCredentials,
