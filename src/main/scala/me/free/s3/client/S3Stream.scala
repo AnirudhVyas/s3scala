@@ -7,12 +7,13 @@ import software.amazon.awssdk.services.s3.model.{
   DeleteBucketResponse,
   DeleteObjectResponse,
   ListBucketsResponse,
+  ListObjectsResponse,
   PutObjectResponse
 }
 
 final case class BucketObjectEntry(name: String, key: String, filePath: String)
 trait S3StreamReader[F[_]] {
-  def listObjects(bucketNames: Observable[String])
+  def listObjects(bucketNames: Observable[String]): F[ListObjectsResponse]
   def listBucketsStream: F[ListBucketsResponse]
 }
 trait S3StreamWriter[F[_]] {
