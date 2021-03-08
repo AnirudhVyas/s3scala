@@ -51,5 +51,5 @@ class SampleTestIOApp extends IOApp {
 }
 
 ```
-## Ingest S3 using Monix Observables
+## Ingest to S3 & pick data streams using Monix Observables
 Work in progress.
